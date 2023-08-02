@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  input[type="range"] {
+    background: linear-gradient(
+      to right,
+      rgb(165, 243, 235) 0%,
+      rgb(165, 243, 235) 52%,
+      rgb(234, 238, 251) 50%,
+      rgb(234, 238, 251) 100%
+    );
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none  bg-pri-strong-cyan w-[45px] aspect-square rounded-full transition-all bg-[url('../images/icon-slider.svg')] bg-no-repeat bg-center hover:bg-pri-soft-cyan shadow-xl focus:bg-pri-soft-cyan shadow-pri-soft-cyan;
+  }
+}
