@@ -19,21 +19,34 @@
     <script defer src="./assets/js/app.js"></script>
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
-  <body class="font-manrope bg-neu-very-pale-blue">
-    <main class="grid place-items-center h-[90vh]">
-      <div class="">
-        <div class="text-center grid gap-4 mb-20">
-          <h2 class="text-3xl font-extrabold text-neu-dark-desaturated-blue">
+  <body
+    class="bg-[url('../images/bg-pattern.svg')] md:bg-contain md:bg-top bg-cover bg-[-30%] bg-no-repeat bg-neu-very-pale-blue font-manrope"
+  >
+    <main class="block md:grid place-items-center md:h-[90vh]">
+      <div class="w-[80%] mx-auto md:place-items-center md:grid">
+        <div
+          class="text-center relative my-20 md:my-0 mx-auto md:mx-0 md:mb-20"
+        >
+          <img
+            class="absolute -top-12 -z-10 left-1/2 -translate-x-1/2"
+            src="./assets/images/pattern-circles.svg"
+            alt=""
+          />
+          <h2
+            class="mb-2 md:mb-0 md:text-3xl text-lg font-extrabold text-neu-dark-desaturated-blue"
+          >
             Simple, traffic-based pricing
           </h2>
-          <p class="text-base font-semibold text-neu-grayish-blue">
+          <p
+            class="text-[0.9rem] w-[70%] mx-auto md:text-base font-semibold text-neu-grayish-blue"
+          >
             Sign-up for our 30-day trial. No credit card required.
           </p>
         </div>
         <div
-          class="w-[600px] gap-12 pb-8 p-12 text-neu-grayish-blue grid bg-neu-white border"
+          class="block md:w-[600px] gap-12 pb-8 p-12 text-neu-grayish-blue md:grid bg-neu-white border"
         >
-          <div class="flex justify-between items-center">
+          <div class="block md:flex justify-between items-center">
             <p class="uppercase font-extrabold tracking-widest">
               <span>100K</span>
               Pageviews
@@ -47,6 +60,9 @@
             </p>
           </div>
           <div>
+            <label class="hidden" for="default-range" aria-hidden="true"
+              >range:</label
+            >
             <input
               id="default-range"
               type="range"
@@ -54,13 +70,21 @@
               class="w-full rounded-lg h-2 appearance-none cursor-pointer"
             />
           </div>
-          <div class="flex items-center justify-end pr-6 gap-4">
+          <div class="flex items-center justify-end md:pr-6 md:gap-4">
             <span>Monthly Billing</span>
             <div class="inline">
               <label class="flex relative cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer" />
+                <label class="hidden" for="toggle" aria-hidden="true"
+                  >toggle check</label
+                >
+                <input
+                  id="toggle"
+                  type="checkbox"
+                  value=""
+                  class="sr-only peer"
+                />
                 <div
-                  class="inline-flex cursor-pointer w-12 h-6 relative bg-gray-200 checked:bg-pri-soft-cyan peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[4px] after:left-[5px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-pri-soft-cyan"
+                  class="inline-flex w-12 h-6 relative bg-gray-200 checked:bg-pri-soft-cyan peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[4px] after:left-[5px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-pri-soft-cyan peer-hover:bg-pri-soft-cyan peer-focus:bg-pri-soft-cyan"
                 ></div>
               </label>
             </div>
@@ -73,11 +97,11 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-between">
-            <ul class="grid">
+          <div class="flex items-center justify-between">
+            <ul class="grid gap-2">
               <li class="">
                 <img
-                  class="inline mr-8"
+                  class="inline mr-4"
                   src="./assets/images/icon-check.svg"
                   alt=""
                 />
@@ -85,7 +109,7 @@
               </li>
               <li class="">
                 <img
-                  class="inline mr-8"
+                  class="inline mr-4"
                   src="./assets/images/icon-check.svg"
                   alt=""
                 />
@@ -93,14 +117,19 @@
               </li>
               <li class="">
                 <img
-                  class="inline mr-8"
+                  class="inline mr-4"
                   src="./assets/images/icon-check.svg"
                   alt=""
                 />
                 <span> Email reports </span>
               </li>
             </ul>
-            <button class="" type="button">Start my trial</button>
+            <button
+              class="rounded-full font-bold px-12 py-3 bg-neu-dark-desaturated-blue text-neu-light-grayish-blue hover:text-neu-white focus:text-neu-white transition duration-300 ease-in-out"
+              type="button"
+            >
+              Start my trial
+            </button>
           </div>
         </div>
       </div>
