@@ -20,13 +20,11 @@
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body
-    class="bg-[url('../images/bg-pattern.svg')] md:bg-contain md:bg-top bg-cover bg-[-30%] bg-no-repeat bg-neu-very-pale-blue font-manrope"
+    class="bg-[url('../images/bg-pattern.svg')] md:bg-contain bg-auto bg-no-repeat bg-neu-very-pale-blue font-manrope grid place-items-center h-screen"
   >
-    <main class="block md:grid place-items-center md:h-[90vh]">
-      <div class="w-[80%] mx-auto md:place-items-center md:grid">
-        <div
-          class="text-center relative my-20 md:my-0 mx-auto md:mx-0 md:mb-20"
-        >
+    <main class="grid place-items-center mx-auto w-[90%]">
+      <div class="w-full mx-auto md:place-items-center md:grid">
+        <div class="text-center relative my-20 mx-auto md:m-0 md:mb-20">
           <img
             class="absolute -top-12 -z-10 left-1/2 -translate-x-1/2"
             src="./assets/images/pattern-circles.svg"
@@ -44,33 +42,39 @@
           </p>
         </div>
         <div
-          class="block md:w-[600px] gap-12 pb-8 p-12 text-neu-grayish-blue md:grid bg-neu-white border"
+          class="md:mb-8 text-center md:text-left block md:w-[600px] gap-12 pb-8 md:p-12 p-8 px-4 px-auto text-neu-grayish-blue md:grid bg-neu-white border"
         >
-          <div class="block md:flex justify-between items-center">
-            <p class="uppercase font-extrabold tracking-widest">
+          <div
+            class="grid gap-8 md:text-center items-stretch md:justify-between md:items-center"
+          >
+            <p
+              class="uppercase font-extrabold tracking-widest text-sm md:text-base"
+            >
               <span>100K</span>
               Pageviews
             </p>
-            <p class="flex items-center gap-2">
+            <p class="md:col-start-2 flex justify-center items-center gap-2">
               <span
-                class="text-neu-dark-desaturated-blue text-[3rem] font-extrabold"
+                class="text-neu-dark-desaturated-blue md:text-[3rem] font-extrabold text-4xl"
                 >$16.00
               </span>
               / month
             </p>
+            <div class="md:col-span-2 row-start-2 md:row-start-auto">
+              <label class="hidden" for="default-range" aria-hidden="true"
+                >range:</label
+              >
+              <input
+                id="default-range"
+                type="range"
+                value="50"
+                class="w-full rounded-lg h-2 appearance-none cursor-pointer"
+              />
+            </div>
           </div>
-          <div>
-            <label class="hidden" for="default-range" aria-hidden="true"
-              >range:</label
-            >
-            <input
-              id="default-range"
-              type="range"
-              value="50"
-              class="w-full rounded-lg h-2 appearance-none cursor-pointer"
-            />
-          </div>
-          <div class="flex items-center justify-end md:pr-6 md:gap-4">
+          <div
+            class="md:my-0 my-8 flex items-center justify-end md:text-base text-[.8rem] md:pr-6 md:gap-4 gap-[0.9rem] -mx-2"
+          >
             <span>Monthly Billing</span>
             <div class="inline">
               <label class="flex relative cursor-pointer">
@@ -91,14 +95,16 @@
             <div class="flex items-center gap-2">
               <span>Yearly Billing</span>
               <div
-                class="text-pri-light-red bg-pri-light-grayish-red font-extrabold text-[.8rem] px-2 rounded-[2vw]"
+                class="text-red-400 bg-pri-light-grayish-red font-extrabold text-[.8rem] px-2 rounded-[2vw]"
               >
-                <span>25% discount</span>
+                <span>-25% <span class="hidden md:inline">discount</span></span>
               </div>
             </div>
           </div>
-          <div class="flex items-center justify-between">
-            <ul class="grid gap-2">
+          <div
+            class="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-between border-t -mx-4 pt-6 md:-mx-12 md:justify-around"
+          >
+            <ul class="grid gap-2 text-sm md:text-base">
               <li class="">
                 <img
                   class="inline mr-4"
@@ -134,16 +140,15 @@
         </div>
       </div>
     </main>
-    <footer class="h-[10vh] text-center">
+    <footer class="md:absolute relative bottom-5 text-center px-4 mt-4 w-fit">
       <div>
         Challenge by
         <a
-          class="text-pri-light-red"
+          class="text-red-400"
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
           >Frontend Mentor</a
-        >. Coded by
-        <a class="text-pri-light-red" href="#">Maurício P. Farias</a>.
+        >. Coded by <a class="text-red-400" href="#">Maurício P. Farias</a>.
       </div>
     </footer>
   </body>
