@@ -50,13 +50,17 @@
             <p
               class="uppercase font-extrabold tracking-widest text-sm md:text-base"
             >
-              <span>100K</span>
-              Pageviews
+              <span data-pageviews>100K</span> Pageviews
             </p>
             <p class="md:col-start-2 flex justify-center items-center gap-2">
               <span
                 class="text-neu-dark-desaturated-blue md:text-[3rem] font-extrabold text-4xl"
-                >$16.00
+                >$</span
+              >
+              <span
+                data-price
+                class="text-neu-dark-desaturated-blue md:text-[3rem] font-extrabold text-4xl"
+                >16.00
               </span>
               / month
             </p>
@@ -65,9 +69,12 @@
                 >range:</label
               >
               <input
+                data-range
                 id="default-range"
                 type="range"
-                value="50"
+                value="18"
+                min="0"
+                max="36"
                 class="w-full rounded-lg h-2 appearance-none cursor-pointer"
               />
             </div>
@@ -82,6 +89,7 @@
                   >toggle check</label
                 >
                 <input
+                  date-toggle
                   id="toggle"
                   type="checkbox"
                   value=""
@@ -95,7 +103,7 @@
             <div class="flex items-center gap-2">
               <span>Yearly Billing</span>
               <div
-                class="text-red-400 bg-pri-light-grayish-red font-extrabold text-[.8rem] px-2 rounded-[2vw]"
+                class="text-red-500 bg-pri-light-grayish-red font-extrabold text-[.8rem] px-2 rounded-[2vw]"
               >
                 <span>-25% <span class="hidden md:inline">discount</span></span>
               </div>
@@ -144,11 +152,16 @@
       <div>
         Challenge by
         <a
-          class="text-red-400"
+          class="text-red-500 hover:text-pri-strong-cyan focus:text-pri-strong-cyan"
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a class="text-red-400" href="#">Maurício P. Farias</a>.
+        >. Coded by
+        <a
+          class="text-red-500 hover:text-pri-strong-cyan focus:text-pri-strong-cyan"
+          href="#"
+          >Maurício P. Farias</a
+        >.
       </div>
     </footer>
   </body>
