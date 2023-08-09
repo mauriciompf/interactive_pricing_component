@@ -14,6 +14,6 @@
   }
 
   input[type="range"]::-webkit-slider-thumb {
-    @apply appearance-none  bg-pri-strong-cyan w-[45px] aspect-square rounded-full transition-all bg-[url('../images/icon-slider.svg')] bg-no-repeat bg-center shadow-xl shadow-pri-soft-cyan hover:brightness-200 focus:brightness-200;
+    @apply appearance-none  bg-pri-strong-cyan w-[45px] aspect-square rounded-full transition-all bg-[url('../images/icon-slider.svg')] bg-no-repeat bg-center shadow-xl shadow-pri-soft-cyan;
   }
 }
